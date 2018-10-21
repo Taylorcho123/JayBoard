@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>로그인</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script>
+        function captchaSubmit(data) {
+            document.getElementById("contact").submit();
+        }
+    </script>
+    <style>
+        .grecaptcha-badge {display: none;}
+    </style>
+</head>
+<body>
+    <form id="contact" action="results.php" method="post">
+        <label>아이디   : <input type="text" name="first"></label><br>
+        <label>패스워드 :  <input type="password" name="last"></label><br>
+        <button class="g-recaptcha" data-sitekey="6Lewb3UUAAAAAC5k1J0KNyTMcGkTayRMS0yGH_5q" data-callback="captchaSubmit" data-badge="inline">Submit</button>
+        <p>Invisible reCAPTCHA를 사용했습니다.</p>
+    </form>
+</body>
+</html>
